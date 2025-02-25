@@ -1,0 +1,11 @@
+<h1>Articles#show</h1>
+<p>Find me in app/views/articles/show.html.erb</p>
+
+<h2> <%=@article.title%></h2>
+<p> <%=@article.content%> </p>
+
+<%= link_to edit_article_path(@article) do %>
+  <i class="fa-solid fa-pen text-blue"></i>
+<% end %>
+
+<p><%= link_to 'delete', article_path(@article), data: {turbo_method: :delete, turbo_confirm: 'validation?'}%></p>
